@@ -22,10 +22,12 @@ public class MainActivity extends ActionBarActivity {
         toolbar = (Toolbar)findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         NavegationDrawerFragment drawerFragment =(NavegationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navegation_drawer);
 
-        drawerFragment.setUp((DrawerLayout)findViewById(R.id.drawer_layout), toolbar);
+        drawerFragment.setUp(R.id.fragment_navegation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout), toolbar);
     }
 
 
